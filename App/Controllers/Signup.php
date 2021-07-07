@@ -24,5 +24,7 @@ class Signup extends Controller
     public function createAction()
     {
         $user = new User($_POST);
+        $user->save();
+        View::renderTemplate('Signup/success.html');
     }
 }
